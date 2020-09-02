@@ -1,0 +1,17 @@
+﻿@page
+@model Gourmet_Pizza.Pages.PizzaTest.PurchaseModel
+@{
+    ViewData["Title"] = "Purchase";
+}
+<div class="border">
+    <h2>Purchase</h2>
+    <h4>
+        @ViewData["Name"]
+    </h4>
+
+    <img style="height:450px;width:800px;" src="~/images/@(ViewData["Name"]).jpg" />
+
+    <h3>
+        Total Price: $ @ViewData["Price"]
+    </h3>
+</div>
