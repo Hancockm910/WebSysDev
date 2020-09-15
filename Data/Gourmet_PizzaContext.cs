@@ -15,5 +15,7 @@ namespace Gourmet_Pizza.Data
         }
 
         public DbSet<Gourmet_Pizza.Model.Pizza> Pizza { get; set; }
+
+        public DbSet<Gourmet_Pizza.Model.Customer> Customer { get; set; }
     }
 }

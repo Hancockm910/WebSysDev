@@ -13,7 +13,36 @@ namespace Gourmet_Pizza.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.6");
+                .HasAnnotation("ProductVersion", "3.1.7");
+
+            modelBuilder.Entity("Gourmet_Pizza.Model.Customer", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("DoB")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Phone")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("PostCode")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("fName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("lName")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Customer");
+                });
 
             modelBuilder.Entity("Gourmet_Pizza.Model.Pizza", b =>
                 {

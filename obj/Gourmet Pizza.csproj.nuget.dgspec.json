@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Zedekiah\\source\\repos\\Gourmet Pizza\\Gourmet Pizza.csproj": {}
+    "C:\\Users\\Zedekiah\\source\\repos\\WebSysDev\\Gourmet Pizza.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Zedekiah\\source\\repos\\Gourmet Pizza\\Gourmet Pizza.csproj": {
+    "C:\\Users\\Zedekiah\\source\\repos\\WebSysDev\\Gourmet Pizza.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Zedekiah\\source\\repos\\Gourmet Pizza\\Gourmet Pizza.csproj",
+        "projectUniqueName": "C:\\Users\\Zedekiah\\source\\repos\\WebSysDev\\Gourmet Pizza.csproj",
         "projectName": "Gourmet Pizza",
-        "projectPath": "C:\\Users\\Zedekiah\\source\\repos\\Gourmet Pizza\\Gourmet Pizza.csproj",
+        "projectPath": "C:\\Users\\Zedekiah\\source\\repos\\WebSysDev\\Gourmet Pizza.csproj",
         "packagesPath": "C:\\Users\\Zedekiah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Zedekiah\\source\\repos\\Gourmet Pizza\\obj\\",
+        "outputPath": "C:\\Users\\Zedekiah\\source\\repos\\WebSysDev\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -45,17 +45,17 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.1.6, )"
+              "version": "[3.1.7, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[3.1.6, )"
+              "version": "[3.1.7, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.6, )"
+              "version": "[3.1.7, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",

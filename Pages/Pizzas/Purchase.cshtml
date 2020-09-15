@@ -1,0 +1,52 @@
+﻿@page
+@model Gourmet_Pizza.Pages.Pizzas.PurchaseModel
+@{
+    ViewData["Name"] = "Purchase";
+}
+
+<h2>Purchase Pizza Page</h2>
+<br />
+
+<form asp-page="Purchase">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="PizzaPurchase.PizzaName" class="control-label"></label>
+        <select asp-for="PizzaPurchase.PizzaName" asp-items="Model.TitleList" class="form-control">
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="PizzaPurchase.TicketCount" class="control-label"></label>
+        <input asp-for="PizzaPurchase.TicketCount" class="form-control" />
+        <span asp-validation-for="PizzaPurchase.TicketCount" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="PizzaPurchase.CreditCard" class="control-label"></label>
+        <input asp-for="PizzaPurchase.CreditCard" class="form-control" />
+        <span asp-validation-for="PizzaPurchase.CreditCard" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Purchase" class="btn btn-primary" />
+    </div>
+</form>
+<br />
+
+<hr />
+@if (ViewData["TotalPrice"] != null)
+{
+    <h5>
+        You have purchased @Model.PizzaPurchase.TicketCount x @Model.PizzaPurchase.PizzaName pizzas.
+    </h5>
+
+    <h5>The Total Price is: <b>$@ViewData["TotalPrice"]</b>.</h5>
+    <h5>Credit card to charge: <b>@ViewData["CCard"]</b></h5>
+
+    <hr />
+}
+
+<div>
+    <a asp-page="./Index">Back to Pizza List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

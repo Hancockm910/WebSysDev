@@ -1,0 +1,83 @@
+﻿@page "{SearchString?}"
+@model Gourmet_Pizza.Pages.Customers.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+@* Generating the web form containing a search box. *@
+<form class="form-inline" method="get">
+    <div class="form-group">
+        <label for="SearchString" class="control-label">Search Name: &nbsp; &nbsp; </label>
+        @* The name "SearchString" must match the property name in IndexModel class. *@
+        <input type="text" name="SearchString" asp-for="SearchString" class="form-control" />
+    </div>
+    <div>
+        &nbsp; &nbsp;  @* Introducing two spaces *@
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Search" class="btn btn-primary" />
+    </div>
+</form>
+</br>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].fName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].lName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].DoB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].PostCode)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Customer)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.lName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DoB)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PostCode)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
